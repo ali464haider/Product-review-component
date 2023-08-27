@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #F3EAE3;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: inherit;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 8px;
+    background-color: white;
+    height: 450px;
+    width: 600px;
+    overflow: hidden;
+}
+
+.container .image{
+    background-image: url('./images/image-product-desktop.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container .content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+}
+
+.container .mini-title{
+    font-size: 12px;
+    font-weight: 700;
+    color: hsl(0, 0%, 59%);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.content > h1{
+    line-height: 29px;
+    letter-spacing: .4px;
+}
+
+.content > p{
+    font-size: 16px;
+    line-height: 25px;
+    color: hsl(0, 0%, 59%);
+    margin-top: 5px;
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.price span:nth-of-type(1){
+    font-size: 30px;
+    color: #397961;
+    font-weight: 600;
+}
+
+.price span:nth-of-type(2){
+    text-decoration: line-through;
+    font-size: 14px;
+    color: hsl(0, 0%, 59%);
+}
+
+.content button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #397961;
+    color: white;
+}
+
+.content button:hover{
+    background-color: #2A5D4C;
+}
+
+
+@media screen and (max-width: 768px){
+
+    main{
+        padding: 20px;
+        align-items: flex-start;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 400px; 
+        height: auto;   
+    }
+
+    .image{
+        order: 0;
+        background-position: 40% 38% !important;
+    }
+
+    .container .content{
+        padding: 20px;
+    }
+}
